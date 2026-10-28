@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bengali Hindi Music</title>
+<style>
+body {
+  margin: 0;
+  background: #07111f;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+header {
+  background: #111d33;
+  padding: 22px 10px;
+  text-align: center;
+}
+h1 { color: #ff3990; }
+.hero {
+  margin: 18px;
+  padding: 25px 12px;
+  text-align: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#5124b8,#ec3285);
+}
+input {
+  width: 85%;
+  padding: 13px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+}
+main { padding: 12px; }
+.songs {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 12px;
+}
+.song {
+  background: #15243b;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+button {
+  background: #ff3990;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 20px;
+}
+a { color: white; text-decoration: none; }
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  color: #bbb;
+}
+</style>
+</head>
+<body><header>
+  <h1>🎵 Bengali Hindi Music</h1>
+  <p>আপনার পছন্দের গান, আপনার পছন্দের সুর!</p>
+</header><section class="hero">
+  <h2>🎧 গানের দুনিয়ায় স্বাগতম!</h2>
+  <p>বাংলা ও হিন্দি গান খুঁজুন</p>
+  <input id="search" placeholder="গানের নাম লিখুন..."
+  oninput="searchSongs()">
+</section><main>
+<h2>🔥 জনপ্রিয় গান</h2><div class="songs" id="songs">
+  <div class="song">
+    <h3>বাংলা গান</h3>
+    <p>বাংলা গানের সংগ্রহ</p>
+    <a href="https://www.youtube.com/results?search_query=popular+Bengali+songs" target="_blank" rel="noopener">
+    <button>▶ গান শুনুন</button></a>
+  </div>  <div class="song">
+    <h3>হিন্দি গান</h3>
+    <p>হিন্দি গানের সংগ্রহ</p>
+    <a href="https://www.youtube.com/results?search_query=popular+Hindi+songs" target="_blank" rel="noopener">
+    <button>▶ গান শুনুন</button></a>
+  </div>  <div class="song">
+    <h3>রবীন্দ্রসঙ্গীত</h3>
+    <p>বাংলা ক্লাসিক্যাল গান</p>
+    <a href="https://www.youtube.com/results?search_query=Rabindra+Sangeet" target="_blank" rel="noopener">
+    <button>▶ গান শুনুন</button></a>
+  </div>  <div class="song">
+    <h3>হিন্দি রোমান্টিক গান</h3>
+    <p>প্রেমের গানের সংগ্রহ</p>
+    <a href="https://www.youtube.com/results?search_query=Hindi+romantic+songs" target="_blank" rel="noopener">
+    <button>▶ গান শুনুন</button></a>
+  </div>
+</div>
+</main><footer>
+  <p>© 2026 Bengali Hindi Music</p>
+  <p>গান শুনুন, আনন্দে থাকুন ❤️</p>
+</footer><script>
+function searchSongs() {
+  const q = document.getElementById("search").value.toLowerCase();
+  document.querySelectorAll(".song").forEach(song => {
+    song.style.display = song.innerText.toLowerCase().includes(q) ? "" : "none";
+  });
+}
+</script></body>
+</html>
